@@ -8,7 +8,7 @@ let defaultCenter =  { lat: 38.6271542, lng: -121.0921948 };
 let defaultZoom = 10;
 let defaultMapId = '8e2c66eaea082271';
 
-let polygonKmlPath = '/service-areas/'; 
+let polygonKmlPath = 'https://lvisana.github.io/foothill-tech/service-areas/'; 
 let defaultPolygonKmlArea = 'Sacramento.kml'; 
 let defaultPolygonKmlFile = polygonKmlPath+defaultPolygonKmlArea;
 let defaultPolygonPath = getPolygonPaths(defaultPolygonKmlFile);
