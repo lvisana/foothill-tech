@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Area test</title>
+    <link rel="stylesheet" href="service-areas.css">
+    <script src="config.js"></script>
+    <script>
+        const script = document.createElement('script');
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places,geometry&callback=initMapWrapper`;
+        document.head.appendChild(script);
+    </script>
+    <script src=""></script>
+</head>
+<body>
+    <div style="display: flex; gap: 1rem;">
+        <input type="text" id="address" placeholder="Enter your address">
+    </div>
+    <p style="display: none;" id="notice_success">Hooray! We do offer services in your area</p>
+    <p style="display: none;" id="notice_error">We're sorry. We do not offer service in your area, or try with a different address.</p>
+    <div>
+        <button id="resetButton">Reset View</button>
+    </div>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+
+    <div id="contact_form" style="display: none;">
+        <form action="">
+            <div>
+                <div><label for="">Name</label></div>
+                <div><input type="text" name="" id=""></div>
+            </div>
+            <div>
+                <div><label for="">Email</label></div>
+                <div><input type="email" name="" id=""></div>
+            </div>
+        </form>
+    </div>
+    <script src="service-areas.js"></script>
+</body>
+</html>
