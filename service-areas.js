@@ -138,8 +138,3 @@ function validateLatLng(latLng) {
         addressError.style.display = "block";
     }
 }
-
-
-window.onload = async () => {
-    await initMapWrapper();
-};

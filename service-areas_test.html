@@ -6,12 +6,12 @@
     <title>Service Area test</title>
     <link rel="stylesheet" href="service-areas.css">
     <script src="config.js"></script>
+    <script src="handler.js"></script>
     <script>
         const script = document.createElement('script');
         script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places,geometry&callback=initMapWrapper`;
         document.head.appendChild(script);
     </script>
-    <script src=""></script>
 </head>
 <body>
     <div style="display: flex; gap: 1rem;">
