@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Rescue</name>
+    <description/>
+    <Style id="poly-757575-5000-41-nodesc-normal">
+      <LineStyle>
+        <color>ff757575</color>
+        <width>5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>29757575</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-757575-5000-41-nodesc-highlight">
+      <LineStyle>
+        <color>ff757575</color>
+        <width>7.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>29757575</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-757575-5000-41-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-757575-5000-41-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-757575-5000-41-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Antelope</name>
+      <Placemark>
+        <name>Service Area</name>
+        <styleUrl>#poly-757575-5000-41-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -120.933512,38.7244251,0
+                -120.9609647,38.7196686,0
+                -120.95839,38.7080204,0
+                -120.9497979,38.6974478,0
+                -120.9394292,38.6982125,0
+                -120.9287168,38.7027285,0
+                -120.9176456,38.7067989,0
+                -120.9177554,38.7175552,0
+                -120.9229911,38.7238014,0
+                -120.933512,38.7244251,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

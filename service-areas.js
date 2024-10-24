@@ -11,12 +11,6 @@ let defaultMapId = '8e2c66eaea082271';
 let polygonKmlPath = 'https://lvisana.github.io/foothill-tech/service-areas/'; 
 let defaultPolygonKmlArea = 'Sacramento.kml'; 
 let defaultPolygonKmlFile = polygonKmlPath+defaultPolygonKmlArea;
-let defaultPolygonPath = getPolygonPaths(defaultPolygonKmlFile);
-
-async function getPolygonPaths(kmlFile) {
-    const paths = await extractPolygonPaths(kmlFile);
-    return paths[0];
-}
 
 async function extractPolygonPaths(kmlUrl) {
     try {
@@ -54,7 +48,9 @@ async function extractPolygonPaths(kmlUrl) {
     }
 }
 
-async function initMap(mapCenter = defaultCenter, mapZoom = defaultZoom, mapId = defaultMapId, polygonPath = defaultPolygonPath) {
+async function initMap(mapCenter = defaultCenter, mapZoom = defaultZoom, mapId = defaultMapId, polygonFile = defaultPolygonKmlFile) {
+    let polygonPath = await extractPolygonPaths(polygonFile);
+    
     const { Map } = await google.maps.importLibrary("maps");
     geocoder = new google.maps.Geocoder();
 

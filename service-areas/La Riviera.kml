@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>La Riviera</name>
+    <description/>
+    <Style id="poly-757575-5000-41-nodesc-normal">
+      <LineStyle>
+        <color>ff757575</color>
+        <width>5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>29757575</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-757575-5000-41-nodesc-highlight">
+      <LineStyle>
+        <color>ff757575</color>
+        <width>7.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>29757575</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-757575-5000-41-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-757575-5000-41-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-757575-5000-41-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Antelope</name>
+      <Placemark>
+        <name>Service Area</name>
+        <styleUrl>#poly-757575-5000-41-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -121.3510154,38.5762525,0
+                -121.3645381,38.5700747,0
+                -121.3726828,38.567611,0
+                -121.3832303,38.5670257,0
+                -121.3790945,38.5583355,0
+                -121.3690172,38.5597287,0
+                -121.3459734,38.5621863,0
+                -121.3364891,38.5655076,0
+                -121.336106,38.5743535,0
+                -121.3350989,38.5757904,0
+                -121.333491,38.5778311,0
+                -121.3354709,38.5780763,0
+                -121.3359977,38.5788352,0
+                -121.3449112,38.5783089,0
+                -121.3510154,38.5762525,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

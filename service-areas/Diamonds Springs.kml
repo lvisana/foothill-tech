@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Diamonds Springs</name>
+    <description/>
+    <Style id="poly-757575-5000-41-nodesc-normal">
+      <LineStyle>
+        <color>ff757575</color>
+        <width>5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>29757575</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-757575-5000-41-nodesc-highlight">
+      <LineStyle>
+        <color>ff757575</color>
+        <width>7.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>29757575</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-757575-5000-41-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-757575-5000-41-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-757575-5000-41-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Antelope</name>
+      <Placemark>
+        <name>Service Area</name>
+        <styleUrl>#poly-757575-5000-41-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -120.8154235,38.7035219,0
+                -120.8218125,38.7025797,0
+                -120.8261227,38.7037826,0
+                -120.8307715,38.7068586,0
+                -120.8312451,38.7041191,0
+                -120.8353271,38.6980337,0
+                -120.8375618,38.6937628,0
+                -120.8420146,38.6923318,0
+                -120.8356618,38.684439,0
+                -120.8349711,38.6790489,0
+                -120.8361672,38.6740622,0
+                -120.835736,38.6706808,0
+                -120.8183432,38.673519,0
+                -120.7884026,38.6907215,0
+                -120.7948659,38.6929043,0
+                -120.8004843,38.6949147,0
+                -120.8077914,38.6955783,0
+                -120.8132119,38.6953054,0
+                -120.8105509,38.6999159,0
+                -120.8125701,38.7038956,0
+                -120.81167,38.7082785,0
+                -120.8132688,38.7084724,0
+                -120.8146958,38.7081308,0
+                -120.8154235,38.7035219,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

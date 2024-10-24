@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Fair Oaks</name>
+    <description/>
+    <Style id="poly-757575-5000-41-nodesc-normal">
+      <LineStyle>
+        <color>ff757575</color>
+        <width>5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>29757575</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-757575-5000-41-nodesc-highlight">
+      <LineStyle>
+        <color>ff757575</color>
+        <width>7.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>29757575</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-757575-5000-41-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-757575-5000-41-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-757575-5000-41-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Antelope</name>
+      <Placemark>
+        <name>Service Area</name>
+        <styleUrl>#poly-757575-5000-41-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -121.2920293,38.6637696,0
+                -121.2923368,38.6308329,0
+                -121.2882639,38.6288066,0
+                -121.2898231,38.6233362,0
+                -121.2854279,38.6207267,0
+                -121.2779091,38.6280043,0
+                -121.2662566,38.6363471,0
+                -121.2555182,38.6391288,0
+                -121.2484313,38.6363621,0
+                -121.2421414,38.6337711,0
+                -121.2341897,38.6348888,0
+                -121.214905,38.6520949,0
+                -121.2142406,38.6409385,0
+                -121.2090778,38.6406171,0
+                -121.2061965,38.6420997,0
+                -121.2021149,38.642979,0
+                -121.1955408,38.6464489,0
+                -121.1935079,38.6519803,0
+                -121.2040313,38.6567449,0
+                -121.2121532,38.66648,0
+                -121.2160472,38.6639589,0
+                -121.2540893,38.6642805,0
+                -121.2920293,38.6637696,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
