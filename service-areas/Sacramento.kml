@@ -83,15 +83,6 @@
       </Pair>
     </StyleMap>
     <Placemark>
-      <name>HQ</name>
-      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
-      <Point>
-        <coordinates>
-          -121.0885898,38.6572966,0
-        </coordinates>
-      </Point>
-    </Placemark>
-    <Placemark>
       <name>Service Area</name>
       <styleUrl>#poly-757575-4101-41-nodesc</styleUrl>
       <Polygon>
