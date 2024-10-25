@@ -20,13 +20,15 @@ window.initMapWrapper = async function() {
   const closeModal = document.getElementById('close_modal');
   const serviceAreaChecker = document.getElementById('service_area_form');
   
-  autocomplete = new google.maps.places.Autocomplete(input, {
-      types: ['address']
-  });
-
-  autocomplete.addListener('place_changed', validateAddress);
-
+  
   if (input) {
+    
+    autocomplete = new google.maps.places.Autocomplete(input, {
+        types: ['address']
+    });
+  
+    autocomplete.addListener('place_changed', validateAddress);
+
     input.addEventListener('keyup', () => {
         clearTimeout(timeout);
         timeout = setTimeout(() => validateAddressManual(input.value), 3000);
