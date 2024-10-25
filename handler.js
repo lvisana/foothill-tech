@@ -3,16 +3,16 @@ window.initMapWrapper = async function() {
   const url = window.location.href;
 
   // if its not a webflow collection, show default map
-  if (!url.includes('/service-areas/')) {
-    if (defaultCenter && defaultZoom && defaultMapId && defaultPolygonPath) {
-      await initMap();
-    }
-  } else {
+  // if (!url.includes('/service-areas/')) {
+  //   if (defaultCenter && defaultZoom && defaultMapId && defaultPolygonPath) {
+  //     await initMap();
+  //   }
+  // } else {
     let mapCenter = { lat: 38.716783421744765, lng: -121.36591377980162 };
     let mapZoom = 13;
     let polygon = polygonKmlPath+'Antelope.kml';
     await initMap(false, mapCenter, mapZoom, polygon);
-  }
+  // }
 
   
   const input = document.getElementById('address');
@@ -22,7 +22,7 @@ window.initMapWrapper = async function() {
   
   
   if (input) {
-    
+
     autocomplete = new google.maps.places.Autocomplete(input, {
         types: ['address']
     });
