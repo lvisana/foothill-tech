@@ -1,8 +1,19 @@
 window.initMapWrapper = async function() {
 
-  if (defaultCenter && defaultZoom && defaultMapId && defaultPolygonKmlFile) {
-    await initMap();
+  const url = window.location.href;
+
+  // if its not a webflow collection, show default map
+  if (!url.includes('/service-areas/')) {
+    if (defaultCenter && defaultZoom && defaultMapId && defaultPolygonPath) {
+      await initMap();
+    }
+  } else {
+    let mapCenter = { lat: 38.716783421744765, lng: -121.36591377980162 };
+    let mapZoom = 13;
+    let polygon = 'Antelope.kml';
+    await initMap(false, mapCenter, mapZoom, polygon);
   }
+
   
   const input = document.getElementById('address');
   const resetButton = document.getElementById('resetButton');
