@@ -10,7 +10,7 @@ window.initMapWrapper = async function() {
   } else {
     let mapCenter = { lat: 38.716783421744765, lng: -121.36591377980162 };
     let mapZoom = 13;
-    let polygon = defaultKmlPath+'Antelope.kml';
+    let polygon = polygonKmlPath+'Antelope.kml';
     await initMap(false, mapCenter, mapZoom, polygon);
   }
 
