@@ -161,6 +161,12 @@ function resetMap(defaultCenter, defaultZoom, mapId) {
 
 
 function validateAddressManual(address) {
+    const addressSuccess = document.querySelector('#notice_success');
+    const addressError = document.querySelector('#notice_error');
+
+    addressSuccess.style.display = "none";
+    addressError.style.display = "none";
+    
     geocoder.geocode({ address: address }, function(results, status) {
         if (status === 'OK' && results.length > 0) {
             const place = results[0];
