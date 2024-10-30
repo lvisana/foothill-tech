@@ -5,14 +5,18 @@ window.initMapWrapper = async function() {
   // if its not a webflow collection, show default map
   // if (!url.includes('/service-areas/')) {
   //   if (defaultCenter && defaultZoom && defaultMapId && defaultPolygonPath) {
-  //     await initMap();
+  //     await initMap(false, );
   //   }
   // } else {
-    let mapCenter = { lat: 38.716783421744765, lng: -121.36591377980162 };
-    let mapZoom = 13;
-    let polygon = polygonKmlPath+'Antelope.kml';
-    await initMap(false, mapCenter, mapZoom, polygon);
+  //   let mapCenter = { lat: 38.716783421744765, lng: -121.36591377980162 };
+  //   let mapZoom = 13;
+  //   let polygon = polygonKmlPath+'Antelope.kml';
+  //   console.log(polygon);
+  //   await initMap(false, mapCenter, mapZoom, polygon);
   // }
+  isQuote = true;
+  await initMap();
+
 
   
   const input = document.getElementById('address');

@@ -3,6 +3,7 @@ let polygon;
 let geocoder;
 let autocomplete;
 let timeout;
+let isQuote = false;
 
 let defaultCenter = { lat: 38.6572966, lng: -121.0885898 };
 let defaultZoom = 10;
@@ -200,12 +201,18 @@ function validateLatLng(latLng) {
     const addressError = document.querySelector('#notice_error');
     const contactForm = document.querySelector('#contact_form');
 
+    const quoteForm = document.querySelector('#quote_form');
+
     const point = new google.maps.LatLng(latLng.lat(), latLng.lng());
-    addressSuccess.style.display = "none";
-    addressError.style.display = "none";
 
     if (google.maps.geometry.poly.containsLocation(point, polygon)) {
-        setTimeout(() => contactForm.style.display = "block", 2000);
+            setTimeout(() => {
+                if (isQuote) {
+                    contactForm.style.display = "block"
+                } else {
+                    quoteForm.style.display = "block"
+                }
+            }, 2000);
         addressSuccess.style.display = "block";
         map.setZoom(10);
     } else {
