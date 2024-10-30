@@ -1,6 +1,6 @@
 window.initMapWrapper = async function() {
 
-  const url = window.location.href;
+  // const url = window.location.href;
 
   // if its not a webflow collection, show default map
   // if (!url.includes('/service-areas/')) {

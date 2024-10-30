@@ -200,7 +200,6 @@ function validateLatLng(latLng) {
     const addressSuccess = document.querySelector('#notice_success');
     const addressError = document.querySelector('#notice_error');
     const contactForm = document.querySelector('#contact_form');
-
     const quoteForm = document.querySelector('#quote_form');
 
     const point = new google.maps.LatLng(latLng.lat(), latLng.lng());
@@ -208,9 +207,9 @@ function validateLatLng(latLng) {
     if (google.maps.geometry.poly.containsLocation(point, polygon)) {
             setTimeout(() => {
                 if (isQuote) {
-                    contactForm.style.display = "block"
-                } else {
                     quoteForm.style.display = "block"
+                } else {
+                    contactForm.style.display = "block"
                 }
             }, 2000);
         addressSuccess.style.display = "block";
