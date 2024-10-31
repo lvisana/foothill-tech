@@ -1,5 +1,5 @@
 window.initMapWrapper = async function() {
-  
+
   // const url = window.location.href;
 
   // if its not a webflow collection, show default map
@@ -65,7 +65,10 @@ window.initMapWrapper = async function() {
 }
   
   if (resetButton) {
-    resetButton.addEventListener('click', resetMap(defaultCenter, defaultZoom, defaultMapId));
+    resetButton.addEventListener('click', function() {
+      map.setCenter(defaultCenter);
+      map.setZoom(defaultZoom);
+    });
   }
   
   if (closeModal) {
