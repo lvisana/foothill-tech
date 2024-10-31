@@ -7,6 +7,7 @@ let isQuote = false;
 
 let defaultCenter = { lat: 38.6572966, lng: -121.0885898 };
 let defaultZoom = 10;
+let defaultMapId = '8e2c66eaea082271';
 let defaultMapStyleId = '6855bf9019f9c448';
 
 let polygonKmlPath = 'https://lvisana.github.io/foothill-tech/service-areas/';
@@ -150,10 +151,11 @@ async function initMap(validate = true, mapCenter = defaultCenter, mapZoom = def
     }
 }
 
-function resetMap(defaultCenter, defaultZoom) {
+function resetMap(defaultCenter, defaultZoom, mapId) {
     map.setOptions({
         center: defaultCenter,
         zoom: defaultZoom,
+        mapId: mapId
     });
 }
 
