@@ -1,5 +1,5 @@
 window.initMapWrapper = async function() {
-
+  
   // const url = window.location.href;
 
   // if its not a webflow collection, show default map
@@ -14,30 +14,55 @@ window.initMapWrapper = async function() {
   //   console.log(polygon);
   //   await initMap(false, mapCenter, mapZoom, polygon);
   // }
+    
   isQuote = true;
   await initMap();
-
-
   
   const input = document.getElementById('address');
   const resetButton = document.getElementById('resetButton');
   const closeModal = document.getElementById('close_modal');
   const serviceAreaChecker = document.getElementById('service_area_form');
-  
+  const captchaBtn = document.getElementById('captchaBtn');
   
   if (input) {
-
-    autocomplete = new google.maps.places.Autocomplete(input, {
-        types: ['address']
-    });
   
-    autocomplete.addListener('place_changed', validateAddress);
+    if (captchaBtn) {
+    console.log(captchaBtn)
+      captchaBtn.addEventListener('click', function() {
+      console.log('here')
+        if (input.value) {
+            let response = validateCaptcha();
+            console.log(response)
+            
+            if (response) {
+              initAutocomplete(input);
+              clearTimeout(timeout);
+              timeout = setTimeout(() => validateAddressManual(input.value), 3000);
+            }
+          }
+      })
+    }
+      
+    function initAutocomplete(input) {
+      autocomplete = new google.maps.places.Autocomplete(input, {
+          types: ['address']
+      });
+      autocomplete.addListener('place_changed', validateAddress);
+		}
 
-    input.addEventListener('keyup', () => {
+    input.addEventListener('keyup', (e) => {
+      e.preventDefault();
+			document.querySelector('#captcha_container').style.display = "block"
+
+      let response = validateCaptcha();
+      
+      if (response) {
+      	initAutocomplete(input);
         clearTimeout(timeout);
         timeout = setTimeout(() => validateAddressManual(input.value), 3000);
+      }
     });
-  }
+}
   
   if (resetButton) {
     resetButton.addEventListener('click', resetMap(defaultCenter, defaultZoom, defaultMapId));
@@ -45,7 +70,7 @@ window.initMapWrapper = async function() {
   
   if (closeModal) {
     closeModal.addEventListener('click', function() {
-    const contactForm = document.querySelector('#contact_form');
+    const contactForm = document.querySelector('#quote_form');
         contactForm.style.display = "none";
     });
   }
@@ -55,4 +80,15 @@ window.initMapWrapper = async function() {
         return false;
     });
  }
+ 
+  function validateCaptcha() {
+    const recaptchaResponse = document.querySelector('.g-recaptcha-response').value;
+
+    if (!recaptchaResponse) {
+      return false;
+    }
+    
+    return true;
+  }
+ 
 }
