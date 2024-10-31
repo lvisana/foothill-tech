@@ -152,11 +152,8 @@ async function initMap(validate = true, mapCenter = defaultCenter, mapZoom = def
 }
 
 function resetMap(defaultCenter, defaultZoom, mapId) {
-    map.setOptions({
-        center: defaultCenter,
-        zoom: defaultZoom,
-        mapId: mapId
-    });
+    map.setCenter(originalCenter);
+    map.setZoom(originalZoom);
 }
 
 
