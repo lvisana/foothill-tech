@@ -4,6 +4,7 @@ let geocoder;
 let autocomplete;
 let timeout;
 let isQuote = false;
+let isFullMap = false;
 
 let defaultCenter = { lat: 38.6572966, lng: -121.0885898 };
 let defaultZoom = 10;
@@ -133,7 +134,7 @@ async function initMap(validate = true, mapCenter = defaultCenter, mapZoom = def
     map.mapTypes.set("styled_map", styledMapType);
     map.setMapTypeId("styled_map");
 
-    if (validate) {
+    if (validate || isFullMap) {
         polygon = new google.maps.Polygon({
             paths: polygonCoords,
             strokeColor: "#1a73e8",

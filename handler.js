@@ -15,7 +15,8 @@ window.initMapWrapper = async function() {
   //   await initMap(false, mapCenter, mapZoom, polygon);
   // }
     
-  isQuote = true;
+  // isQuote = true;
+  // IsFullMap = true;
   await initMap();
   
   const input = document.getElementById('address');
